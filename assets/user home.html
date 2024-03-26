@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Use the desired font */
+            background-color: #f8f9fa; /* Set a light background color */
+        }
+
+        .navbar {
+            background-color: #343a40; /* Set the navbar background color */
+            color: white; /* Set text color to white */
+            padding: 10px 20px; /* Add padding */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space items evenly */
+            align-items: center; /* Align items vertically */
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 24px; /* Set font size */
+        }
+
+        .navbar-content {
+            position: relative;
+        }
+
+        .profile-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #343a40; /* Set dropdown background color */
+            border-radius: 5px; /* Add some border radius */
+            padding: 10px;
+            display: none; /* Hide the dropdown by default */
+            z-index: 1; /* Ensure the dropdown appears above other content */
+        }
+
+        .profile-dropdown.active {
+            display: block; /* Display the dropdown when active */
+        }
+
+        .profile-dropdown-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+            margin: 0;
+        }
+
+        .profile-dropdown-list-item {
+            margin-bottom: 10px;
+        }
+
+        .profile-dropdown-list-item a {
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove underline */
+            display: block;
+            padding: 5px 0;
+        }
+
+        .profile-dropdown-list-item a:hover {
+            background-color: #495057; /* Change background color on hover */
+            border-radius: 3px; /* Add border radius on hover */
+        }
+
+        .fa-circle {
+            font-size: 24px; /* Set font size */
+        }
+
+        .enter-code {
+            background-color: rgba(255, 255, 255, 0.9); /* Background color with opacity */
+            padding: 10px; /* Reduce padding to make the box smaller */
+            margin: 20px; /* Add margin for spacing */
+            width: 400px; /* Set the width of the box */
+            height: 300px;
+            max-width: 80%; /* Limit the maximum width of the box */
+            box-sizing: border-box; /* Include padding and border in the box's total width and height */
+        }
+
+        .enter-code h2 {
+            color: black; /* Set text color to black */
+        }
+
+        .inputBx {
+            margin-bottom: 10px;
+        }
+
+        .inputBx input[type="text"], .inputBx input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none; 
+            outline: none; 
+            background-color: #f0f0f0;
+            color: black; 
+        }
+
+        .inputBx input::placeholder {
+            color: blue !important; /* Change placeholder text color */
+        }
+    </style>
+    <title>Profile Dropdown</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h2>LETS PLAY</h2>
+        <div class="navbar-content">
+            <div class="profile-dropdown">
+                <div onclick="toggle()">
+                    <div class="profile-img">
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                </div>
+                <ul class="profile-dropdown-list">
+                    <li class="profile-dropdown-list-item">
+                        <a href="#"><i class="fa-regular fa-user"></i> Edit Profile</a>
+                    </li>
+                    <li class="profile-dropdown-list-item">
+                        <a href="#"><i class="fa-solid fa-sliders"></i> History</a>
+                    </li>
+                    <li class="profile-dropdown-list-item">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Profile Dropdown</title>
+<style>
+.navbar-content {
+  position: absolute;
+  top: 5px;
+  right: 0 ;
+}
+
+.profile-dropdown {
+  position: relative;
+}
+
+
+.profile-dropdown-btn .fa-circle {
+  border: none; /* Remove the border around the profile photo */
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+ <h2>LETS PLAY</h2>
+  <div class="navbar-content">
+    <div class="profile-dropdown">
+      <div onclick="toggle()">
+        <div class="profile-img">
+          <i class="fa-solid fa-circle"></i>
+        </div>
+        
+      </div>
+      <ul class="profile-dropdown-list">
+        <li class="profile-dropdown-list-item">
+          <a href="#"><i class="fa-regular fa-user"></i> Edit Profile</a>
+        </li>
+        <li class="profile-dropdown-list-item">
+          <a href="#"><i class="fa-solid fa-sliders"></i> History</a>
+        </li>
+        <li class="profile-dropdown-list-item">
+          <a href="file:///C:/Users/priya/Downloads/Quiz_FrontEnd/Quiz_FrontEnd/AdminLogin.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>

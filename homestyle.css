@@ -1,0 +1,82 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+body
+{
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+	background:url(https://t4.ftcdn.net/jpg/02/64/45/17/360_F_264451711_Gt3INmt26pjbTv7eanciQGHcX0hWKBFR.jpg) no-repeat center;
+	background-size: 1540px;
+}
+
+.code
+{
+	position: absolute;
+	width: 500px;
+	top: 50%;
+    left: 300px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 50px;
+}
+
+.inputCx:hover{
+    filter:drop-shadow( 0 0 20px #288698);
+    transition:0.5s;
+}
+.code .inputCx 
+{
+	position: relative;
+	width: 100%;
+}
+.code .inputCx input 
+{
+	position: relative;
+	width: 110%;
+	padding: 12px 20px;
+	background: transparent;
+	border: 2px solid #0670a4;
+	border-radius: 40px;
+	font-size: 1.2em;
+	color: white;
+	box-shadow: none;
+	outline: none;
+}
+.code .inputCx input[type="submit"]
+{
+	width: 50%;
+	justify-content: center;
+	background: #0078ff;
+	background: linear-gradient(45deg,#72ffc2, #3593ff);
+	font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+}
+.code .inputCx input::placeholder 
+{
+	color: rgb(255, 255, 255);
+}
+.code .links
+{
+	position: relative;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+code .links a 
+{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+body
+{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	min-height: 100vh;
+	background:url(https://t4.ftcdn.net/jpg/04/39/13/37/360_F_439133763_FrLdhZsd5aGC23r9ATARuKJBr8ifZjIe.jpg) no-repeat center;
+	background-size: cover;
+	padding-left: 250px;
+}
+.square
+{
+	position: relative;
+	width: 450px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.square i
+{
+	position: absolute;
+	inset: 0;
+	border-radius: 25px;
+
+		transition: 0.5s;
+}
+
+.square:hover i
+{
+	border: 6px solid  #0670a4;
+	filter: drop-shadow(0 0 10px #0670a4);
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+@keyframes animate2
+{
+	0%
+	{
+		transform: rotate(360deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+}
+.login 
+{
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+.login h2 
+{
+	font-size: 2em;
+	color: #3dd0f9
+}
+.inputBx:hover{
+    filter:drop-shadow( 0 0 20px #288698);
+    transition:0.5s;
+}
+.login .inputBx 
+{
+	position: relative;
+	width: 100%;
+}
+.login .inputBx input 
+{
+	position: relative;
+	width: 100%;
+	padding: 12px 20px;
+	background: transparent;
+	border: 2px solid #0670a4;
+	border-radius: 40px;
+	font-size: 1.2em;
+	color: white;
+	box-shadow: none;
+	outline: none;
+}
+.login .inputBx input[type="submit"]
+{
+	width: 100%;
+	background: #0078ff;
+	background: linear-gradient(45deg,#72ffc2, #3593ff);
+	font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+}
+.login .inputBx input::placeholder 
+{
+	color: rgb(255, 255, 255);
+}
+.login .links
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+.login .links a 
+{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+
+

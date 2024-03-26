@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="homestyle.css">
+    <title>Main page</title>
+    <style>
+        .navbar {
+            position: relative;
+            background-color: #333; /* Adjust background color as needed */
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-dropdown {
+            position: relative;
+            color: white;
+        }
+
+        .profile-pic {
+            cursor: pointer;
+        }
+
+        .profile-dropdown-list {
+            display: none;
+            position: absolute;
+            background-color: #333; /* Adjust background color as needed */
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            right: 0;
+        }
+
+        .profile-dropdown.active .profile-dropdown-list {
+            display: block;
+        }
+
+        .profile-dropdown-list-item {
+            padding: 8px 16px;
+            list-style: none;
+        }
+
+        .profile-dropdown-list-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .profile-dropdown-list-item:hover {
+            background-color: #444; /* Adjust hover background color as needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>LETS PLAY</h1>
+        <div class="profile-dropdown">
+            <div onclick="toggle()" class="profile-pic">
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-regular fa-user"></i> Edit Profile</a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-solid fa-sliders"></i> History</a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="AdminLogin.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        function toggle() {
+            var dropdown = document.querySelector('.profile-dropdown-list');
+            dropdown.classList.toggle('active');
+        }
+    </script>
+
+    <div class="code">
+        <div class="inputCx">
+            <input type="text" placeholder="Enter Code">
+        </div>
+        <div class="inputCx">
+            <input type="submit" value="Join">
+        </div>
+    </div>
+</body>
+</html>

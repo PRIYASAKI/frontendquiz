@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Profile Dropdown</title>
+<style>
+.navbar-content {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.profile-dropdown {
+  position: relative;
+  color: white;
+}
+
+.profile-dropdown-btn .fa-circle {
+  border: none;
+  color: white; /* Remove the border around the profile photo */
+}
+
+h3 {
+  color: red;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center LETS PLAY horizontally */
+}
+
+.navbar h2 {
+  width: 100%;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background: url(https://t4.ftcdn.net/jpg/02/64/45/17/360_F_264451711_Gt3INmt26pjbTv7eanciQGHcX0hWKBFR.jpg) no-repeat center;
+  background-size: 1540px;
+}
+
+.code {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.inputCx:hover {
+  filter: drop-shadow(0 0 20px #288698);
+  transition: 0.5s;
+}
+
+.code .inputCx {
+  position: relative;
+  width: 100%;
+}
+
+.code .inputCx input {
+  position: relative;
+  width: 110%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #0670a4;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: none;
+  outline: none;
+}
+
+.code .inputCx input[type="submit"] {
+  width: 50%;
+  justify-content: center;
+  background: #0078ff;
+  background: linear-gradient(45deg, #72ffc2, #3593ff);
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}
+
+.code .inputCx input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.code .links {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+code .links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+ <h2>LETS PLAY</h2>
+  <div class="navbar-content">
+    <div class="profile-dropdown">
+      <div onclick="toggle()" class="profile-img">
+        <i class="fa-solid fa-circle"></i>
+      </div>
+      <ul class="profile-dropdown-list">
+        <li class="profile-dropdown-list-item">
+          <a href="#"><i class="fa-regular fa-user"></i><h3> Edit Profile</h3></a>
+        </li>
+        <li class="profile-dropdown-list-item">
+          <a href="#"><i class="fa-solid fa-sliders"></i><h3>History</h3></a>
+        </li>
+        <li class="profile-dropdown-list-item">
+          <a href="AdminLogin.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><h3>Log out</h3></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="code">
+  <div class="inputCx">
+    <input type="text" placeholder="Enter Code">
+  </div>
+  <div class="inputCx">
+    <input type="submit" value="Join">
+  </div>
+</div>
+
+<script>
+function toggle() {
+    var dropdown = document.querySelector('.profile-dropdown-list');
+    dropdown.classList.toggle('active');
+}
+</script>
+</body>
+</html>
